@@ -15,7 +15,7 @@ def make_dictionary(keys_list, values_list):
     {'key': 'value'}
     """
 
-    return #### YOUR CODE HERE
+    return dict(zip(keys_list, values_list))
 
 print(make_dictionary(["a", "b"], [1, 2]))
 print(make_dictionary([1, 2, 3], [5, 6, 7]))
@@ -32,16 +32,18 @@ score_dict = make_dictionary(names, scores)
 
 # 2. Using `score_dict`, find the score for "Nushi"
 #### YOUR CODE HERE
-
+print(score_dict["Nushi"])
 # 3. Add a score 19 for "John"
 #### YOUR CODE HERE
-
+score_dict["John"] = 19
 # 4. Calculate the average of all the scores in `score_dict`
 #### YOUR CODE HERE
-
+average = sum(score_dict.values())/len(score_dict)
+print(average)
 # 5. Update the score for "Wei" to be 13
 #### YOUR CODE HERE
-
+score_dict["Wei"] = 13
 # 6. Nushi has just dropped this class. Delete "Nushi" and his score from
 # `score_dict`
 #### YOUR CODE HERE
+del score_dict["Nushi"]
